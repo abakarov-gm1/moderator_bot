@@ -17,14 +17,14 @@ func isAllowedTime(t time.Time) bool {
 }
 
 func main() {
-	bot, err := tgbotapi.NewBotAPI("8061969039:AAG0sSXi3URE8IxkXdFxRzy2MUARPnJaloc")
+	bot, err := tgbotapi.NewBotAPI("")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	log.Printf("Bot authorized: %s", bot.Self.UserName)
 
-	chatID := int64(-1002991685648) // ID вашего группового чата
+	chatID := int64() // ID вашего группового чата
 
 	ticker := time.NewTicker(30 * time.Second) // каждые 30 сек проверяем время
 	defer ticker.Stop()
